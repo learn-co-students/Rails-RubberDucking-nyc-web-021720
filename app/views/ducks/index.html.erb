@@ -2,6 +2,13 @@
 
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= duck.name %> | <%= duck.description %>
+    <%= link_to "Edit" ,edit_duck_path(duck)%> /
+    <%= link_to "Delete", duck_path(duck), method: :delete %>
+    </li>
   <% end %>
 </ul>
+
+
+
+<p><%= button_to "Create a new duck", new_duck_path ,method: :get %></p>

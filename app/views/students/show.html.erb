@@ -1,0 +1,9 @@
+
+
+<h3>Student Name: <%= @student.name %> </h3>
+<p>Mod: <%= @student.mod %></p>
+
+<%# <p> Own Duck(s):<%= link_to @student.ducks.map{|d|d.name, duck_path(@student.ducks.id) %>
+<br>
+<%= link_to "See all Students", students_path %> / 
+<%= link_to "See all Ducks", ducks_path %>
