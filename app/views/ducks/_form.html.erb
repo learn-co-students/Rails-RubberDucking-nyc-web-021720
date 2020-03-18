@@ -1,0 +1,17 @@
+<% if flash[:errors]  %>
+    <% flash[:erors].each do |error| %>
+    <p><%= error %></p>
+    <% end %>
+<% end %>
+
+
+<%= form_for @duck do|f| %>
+<p> Duck Name: <%= f.text_field :name %></p>
+
+<p> Duck Description: <%= f.text_area :description %></p>
+
+<p> Duck's Owner: <%= f.collection_select :student_id, Student.all, :id, :name %> </p>
+<br>
+<%= f.submit %>
+<% end %>
+
