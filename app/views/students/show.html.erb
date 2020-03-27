@@ -1,0 +1,22 @@
+<h1><%= @student.name %></h1>
+<h3>Mod: <%= @student.mod %></h3>
+
+<% if @student.ducks.count > 0 then %>
+<div>
+    <h3>Ducks:</h3>
+    <ul>
+    <% @student.ducks.each do |duck| %>
+        <li>
+        <%= link_to duck.name, duck_path(duck) %>
+        </li>
+    <% end %>
+    </ul>
+</div>
+<% end %>
+
+<%= link_to "Edit this student", edit_student_path(@student) %>
+
+<div>
+    <%= link_to "All ducks", ducks_path %>
+    <%= link_to "All students", students_path%>
+</div>

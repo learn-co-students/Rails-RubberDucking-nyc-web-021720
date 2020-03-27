@@ -1,0 +1,15 @@
+<%= form_for duck do |fb| %>
+    <%= fb.label :name %>
+    <%= fb.text_field :name %>
+    <br />
+
+    <%= fb.label :description %>
+    <%= fb.text_area :description %>
+    <br />
+
+    <%# need a dropdown of all the students %>
+    <%= fb.collection_select :student_id, Student.all, :id, :name %>
+    <br />
+
+    <%= fb.submit submit_message %>
+<% end %>
