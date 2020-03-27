@@ -1,0 +1,13 @@
+<%= form_for student do |fb| %>
+
+    <%= fb.label :name %>
+    <%= fb.text_field :name %>
+    <br />
+
+    <%= fb.label :mod %>
+    <%# OK, need to figure this out %>
+    <%= fb.select :mod, [1,2,3,4,5] %>
+    <br />
+
+    <%= fb.submit submit_message %>
+<% end %>
