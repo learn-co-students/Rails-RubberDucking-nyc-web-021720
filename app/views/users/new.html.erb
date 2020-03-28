@@ -1,0 +1,25 @@
+<h1>Register</h1>
+
+<% if flash[:notice].present? %>
+    <h3><%= flash[:notice] %></h3>
+<% end %>
+
+<%= form_for User.new, controller: "users", actions: "create" do |fb| %>
+    <%= fb.label :name %>
+    <%= fb.text_field :name %>
+    <br />
+
+    <%= fb.label :password %>
+    <%= fb.password_field :password %>
+    <br />
+
+    <%= fb.label :password_confirmation %>
+    <%= fb.password_field :password_confirmation %>
+    <br />
+
+    <%= fb.submit "Register" %>
+<% end %>
+
+<br />
+
+<%= link_to "create user", new_user_path %>

@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :check_login
   before_action :get_student, except: [:index, :create]
 
   def index

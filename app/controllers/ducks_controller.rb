@@ -1,4 +1,5 @@
 class DucksController < ApplicationController
+  before_action :check_login
   before_action :get_duck, except: [:index, :create]
 
   def index
