@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <% if !current_page?(login_path) && !current_page?(new_user_path) then %>
+      <%= render partial: "shared/user_banner" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
